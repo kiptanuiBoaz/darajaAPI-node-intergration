@@ -8,14 +8,14 @@ const { default: axios } = require("axios");
 // app.use(cors);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors())
-
-const TokenRoute = require("./routes/token")
-app.use("/token", TokenRoute)
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("Mpesa backend");
 });
+
+const paymentRoute = require("./routes/mpesa")
+app.use("/mpesa", paymentRoute)
 
 
 app.listen(5000, () => {

@@ -50,4 +50,4 @@ const postStk = async (req, res) => {
     });
 };
 
-module.exports = {  postStk };
+module.exports = { postStk };

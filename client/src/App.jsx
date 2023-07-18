@@ -14,7 +14,7 @@ function App() {
   const payHandler = (event) => {
     event.preventDefault();
     setButtonText("Processing")
-    Axios.post("http://localhost:5000/token", {
+    Axios.post("http://localhost:5000/mpesa", {
       amount,
       phone,
     })
